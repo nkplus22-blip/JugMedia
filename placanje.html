@@ -134,12 +134,6 @@ header p{color:var(--muted)}
   font-size:18px;
   color:var(--neon);
 }
-.pay-box span{
-  display:block;
-  font-size:13px;
-  color:var(--muted);
-  margin-top:6px;
-}
 .pay-box::after{
   content:"✔ Sigurna & verifikovana uplata";
   display:block;
@@ -173,14 +167,14 @@ header p{color:var(--muted)}
 
 <nav id="nav" class="overlay">
   <div class="closebtn" onclick="closeNav()">×</div>
-  <a href="index.html">Početna</a>
-  <a href="onama.html">O nama</a>
-  <a href="cjenovnik.html">Cjenovnik</a>
-  <a href="placanje.html">Načini plaćanja</a>
-  <a href="proba.html">Besplatna proba</a>
-  <a href="faq.html">FAQ</a>
-  <a href="kontakt.html">Kontakt</a>
-  <a href="reseller.html">Reseller</a>
+  <a href="index.html" onclick="closeNav()">Početna</a>
+  <a href="onama.html" onclick="closeNav()">O nama</a>
+  <a href="cjenovnik.html" onclick="closeNav()">Cjenovnik</a>
+  <a href="placanje.html" onclick="closeNav()">Načini plaćanja</a>
+  <a href="proba.html" onclick="closeNav()">Besplatna proba</a>
+  <a href="faq.html" onclick="closeNav()">FAQ</a>
+  <a href="kontakt.html" onclick="closeNav()">Kontakt</a>
+  <a href="reseller.html" onclick="closeNav()">Reseller</a>
 </nav>
 
 <div class="wrap">
@@ -189,8 +183,7 @@ header p{color:var(--muted)}
   <span class="menu-btn" onclick="openNav()">☰</span>
   <h1>Načini plaćanja</h1>
   <p>Sigurna uplata – brza aktivacija</p>
-
-  <div class="verified">✔ VERIFIED BUSINESS</div>
+  <div class="verified">✔ VERIFIED & TRUSTED SERVICE</div>
 </header>
 
 <div class="trust-bar">
@@ -198,17 +191,26 @@ header p{color:var(--muted)}
   <span>🛡️ Ne pohranjujemo kartične podatke</span>
   <span>👤 Ručna obrada uplata</span>
   <span>🌍 Podrška širom Evrope</span>
-  <span>📞 24/7 korisnička podrška</span>
+  <span>📞 24/7 podrška</span>
 </div>
 
 <div class="panel" style="text-align:center">
   ⭐ Više od <strong>20.000+</strong> korisnika potvrdilo sigurnost naših plaćanja
 </div>
 
+<div class="panel" style="font-size:14px;color:var(--muted);text-align:center">
+  🔐 Plaćanja se vrše isključivo putem provjerenih kanala.  
+  Nikada ne tražimo PIN, CVC ili pristupne kodove.
+</div>
+
 <div class="panel" style="font-size:14px;color:var(--muted)">
   ℹ️ Aktivacija se vrši u roku od <strong>5–30 minuta</strong>.  
   U rijetkim slučajevima do <strong>12 sati</strong>.  
-  💰 U slučaju tehničkog problema, nudimo zamjenu ili povrat sredstava.
+  💰 U slučaju tehničkog problema nudimo zamjenu ili povrat sredstava.
+</div>
+
+<div class="panel" style="font-size:13px;color:var(--muted)">
+  ⚠️ Naši agenti nikada neće tražiti lozinke, kodove ili pristup vašem uređaju.
 </div>
 
 <div class="panel">
@@ -224,8 +226,12 @@ header p{color:var(--muted)}
   </div>
 </div>
 
+<div class="footer-note">
+  Posljednje ažuriranje sistema plaćanja: <strong>2025</strong>
+</div>
+
 <div class="panel footer-note">
-  Jug Media IPTV je dugogodišnja i provjerena IPTV usluga sa stvarnom podrškom i fizičkom prisutnošću.
+  Jug Media IPTV je dugogodišnja i provjerena IPTV usluga sa stvarnom korisničkom podrškom.
 </div>
 
 </div>
