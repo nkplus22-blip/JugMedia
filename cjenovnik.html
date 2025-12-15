@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="bs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Cjenovnik – Jug Media IPTV paketi</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Jug Media IPTV paketi – Classic, Medium i Pro. Hiljade kanala, filmova i serija uz stabilan IPTV servis.">
+  <meta name="keywords" content="IPTV cijene, IPTV paketi, Jug Media IPTV">
+  <meta name="author" content="Jug Media">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#050714;
+      --neon:#2ac0ff;
+      --accent:#4a6bff;
+      --muted:rgba(200,220,255,0.25);
+      --glass:rgba(255,255,255,0.05);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,sans-serif;
+      background:linear-gradient(180deg,#050714,#02102a);
+      color:#e6f7ff;
+    }
+    a{text-decoration:none;color:inherit}
+
+    .wrap{max-width:1200px;margin:auto;padding:0 18px}
+
+    header{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:24px 12px;
+      position:relative;
+    }
+    .site-logo{max-width:200px}
+    .menu-toggle{
+      position:absolute;
+      top:18px;
+      right:18px;
+      background:none;
+      border:none;
+      color:var(--neon);
+      font-size:32px;
+    }
+
+    /* NAV */
+    .overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(0,6,20,.96);
+      backdrop-filter:blur(8px);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      transform:scale(0);
+      transition:.4s;
+      z-index:999;
+    }
+    .overlay.open{transform:scale(1)}
+    .overlay a{font-size:22px;padding:12px 20px}
+    .closebtn{
+      position:absolute;
+      top:18px;
+      right:22px;
+      font-size:36px;
+      color:var(--neon);
+    }
+
+    /* HERO */
+    .hero{
+      text-align:center;
+      padding:30px 12px 10px;
+    }
+    .hero h1{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:48px;
+      margin:0;
+    }
+    .hero p{
+      max-width:720px;
+      margin:10px auto;
+      color:var(--muted);
+    }
+
+    /* PRICING */
+    .pricing{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+      margin:40px 0;
+    }
+    .plan{
+      background:var(--glass);
+      border-radius:18px;
+      padding:26px 22px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,.05);
+      position:relative;
+    }
+    .plan h2{
+      margin-top:0;
+      font-size:26px;
+    }
+    .price{
+      font-size:42px;
+      font-weight:800;
+      color:var(--neon);
+      margin:10px 0;
+    }
+    .price span{
+      font-size:16px;
+      color:var(--muted);
+    }
+    .features{
+      margin:18px 0;
+      line-height:1.8;
+      color:#dff4ff;
+      font-size:15px;
+    }
+    .btn{
+      display:inline-block;
+      margin-top:18px;
+      padding:14px 26px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--neon),var(--accent));
+      color:#001;
+      font-weight:800;
+    }
+
+    /* PRO */
+    .pro{
+      border:2px solid var(--neon);
+      transform:scale(1.05);
+      box-shadow:0 0 40px rgba(42,176,255,.25);
+    }
+    .badge{
+      position:absolute;
+      top:-14px;
+      left:50%;
+      transform:translateX(-50%);
+      background:var(--neon);
+      color:#001;
+      padding:6px 14px;
+      border-radius:12px;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    footer{
+      margin-top:40px;
+      padding:30px 12px;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,.05);
+      background:rgba(0,0,0,.6);
+    }
+    footer small{
+      display:block;
+      margin-top:8px;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      padding:14px 18px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#25d366,#128c7e);
+      color:#fff;
+      font-weight:800;
+      z-index:999;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<header>
+  <img src="jugmedialogo.PNG" alt="Jug Media IPTV" class="site-logo" loading="lazy">
+  <button class="menu-toggle" onclick="openNav()">☰</button>
+</header>
+
+<nav id="nav" class="overlay">
+  <div class="closebtn" onclick="closeNav()">×</div>
+  <a href="index.html">Početna</a>
+  <a href="cjenovnik.html">Cjenovnik</a>
+  <a href="onama.html">O nama</a>
+  <a href="kontakt.html">Kontakt</a>
+</nav>
+
+<section class="hero">
+  <h1>IPTV Paketi</h1>
+  <p>Izaberite paket koji najbolje odgovara vašim potrebama.  
+     Bez ugovora, bez skrivenih troškova.</p>
+</section>
+
+<section class="pricing">
+
+  <div class="plan">
+    <h2>Classic</h2>
+    <div class="price">6.99€ <span>/ mjesečno</span></div>
+    <div class="features">
+      ✔ 750 live TV programa<br>
+      ✔ 6.500+ videoteke<br>
+      ✔ Stabilan signal<br>
+      ✔ Podrška 24/7
+    </div>
+    <a class="btn" href="https://wa.me/38761366591?text=Zdravo,%20zaniman%20me%20Classic%20IPTV%20paket." target="_blank">
+      Uzmi paket
+    </a>
+  </div>
+
+  <div class="plan">
+    <h2>Medium</h2>
+    <div class="price">7.99€ <span>/ mjesečno</span></div>
+    <div class="features">
+      ✔ 1.380 live TV programa<br>
+      ✔ 23.500+ videoteke<br>
+      ✔ Full HD & 4K<br>
+      ✔ Podrška 24/7
+    </div>
+    <a class="btn" href="https://wa.me/38761366591?text=Zdravo,%20zaniman%20me%20Medium%20IPTV%20paket." target="_blank">
+      Uzmi paket
+    </a>
+  </div>
+
+  <div class="plan pro">
+    <div class="badge">NAJPOPULARNIJI</div>
+    <h2>PRO</h2>
+    <div class="price">12.99€ <span>/ mjesečno</span></div>
+    <div class="features">
+      ✔ 2.250+ live TV kanala<br>
+      ✔ 65.000+ videoteke<br>
+      ✔ Sedmično dodavanje sadržaja<br>
+      ✔ Premium podrška 24/7
+    </div>
+    <a class="btn" href="https://wa.me/38761366591?text=Zdravo,%20zaniman%20me%20PRO%20IPTV%20paket." target="_blank">
+      Uzmi paket
+    </a>
+  </div>
+
+</section>
+
+<footer>
+  <strong>Jug Media IPTV</strong>
+  <small>© 2025 Sva prava zadržana</small>
+  <small>Jug Media ne hostuje niti emituje sadržaj – djelujemo kao tehnička platforma.</small>
+</footer>
+
+</div>
+
+<a href="https://wa.me/38761366591" target="_blank" class="whatsapp">💬 WhatsApp</a>
+
+<script>
+function openNav(){document.getElementById("nav").classList.add("open")}
+function closeNav(){document.getElementById("nav").classList.remove("open")}
+</script>
+
+</body>
+</html>
