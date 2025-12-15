@@ -6,73 +6,267 @@
 
 <title>Reseller program – Jug Media IPTV</title>
 
-<meta name="description" content="Postanite Jug Media IPTV reseller. Radite pod svojim brendom uz našu infrastrukturu i podršku.">
+<meta name="description" content="Postanite Jug Media IPTV reseller. Pokrenite vlastiti IPTV biznis uz našu infrastrukturu, stabilne servere i 24/7 podršku.">
+<meta name="keywords" content="IPTV reseller, IPTV partner, Jug Media reseller">
+<meta name="author" content="Jug Media">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Bebas+Neue&display=swap" rel="stylesheet">
 
 <style>
+:root{
+  --neon:#2ac0ff;
+  --accent:#4a6bff;
+  --muted:rgba(200,220,255,.25);
+  --glass:rgba(255,255,255,.05);
+}
+
+*{box-sizing:border-box}
 body{
   margin:0;
-  font-family:Inter;
+  font-family:Inter,system-ui,Arial,sans-serif;
   background:linear-gradient(180deg,#050714,#02102a);
   color:#e6f7ff;
 }
-.wrap{max-width:900px;margin:auto;padding:40px 18px}
-h1{font-family:'Bebas Neue';font-size:50px;margin:0;text-align:center}
-.panel{
-  background:rgba(255,255,255,.05);
-  padding:26px;
-  border-radius:18px;
-  margin:22px 0;
+a{text-decoration:none;color:inherit}
+
+.wrap{max-width:1000px;margin:auto;padding:0 18px}
+
+/* HEADER */
+header{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:24px 12px;
+  position:relative;
 }
+.site-logo{max-width:200px}
+.menu-toggle{
+  position:absolute;
+  top:18px;
+  right:18px;
+  background:none;
+  border:none;
+  color:var(--neon);
+  font-size:32px;
+  cursor:pointer;
+}
+
+/* NAV */
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,6,20,.96);
+  backdrop-filter:blur(8px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transform:scale(0);
+  transition:.4s;
+  z-index:999;
+}
+.overlay.open{transform:scale(1)}
+.overlay a{font-size:22px;padding:12px 20px}
+.closebtn{
+  position:absolute;
+  top:18px;
+  right:22px;
+  font-size:36px;
+  color:var(--neon);
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:40px 0 20px;
+}
+.hero h1{
+  font-family:'Bebas Neue';
+  font-size:52px;
+  margin:0;
+}
+.hero p{
+  max-width:760px;
+  margin:14px auto;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* PANELS */
+.panel{
+  background:var(--glass);
+  padding:28px;
+  border-radius:18px;
+  margin:26px 0;
+  border:1px solid rgba(255,255,255,.05);
+}
+.panel p{line-height:1.8}
+
+.list{
+  margin-top:10px;
+  line-height:1.9;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+  margin-top:18px;
+}
+.step{
+  background:rgba(255,255,255,.04);
+  border-radius:14px;
+  padding:20px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,.05);
+}
+.step strong{
+  display:block;
+  font-size:22px;
+  color:var(--neon);
+  margin-bottom:6px;
+}
+.step span{
+  font-size:14px;
+  color:var(--muted);
+}
+
 .cta{
   display:block;
   text-align:center;
-  margin-top:20px;
+  margin:30px auto;
+  max-width:420px;
   padding:16px;
   border-radius:16px;
-  background:linear-gradient(135deg,#2ac0ff,#4a6bff);
+  background:linear-gradient(135deg,var(--neon),var(--accent));
   color:#001;
   font-weight:900;
+  font-size:16px;
+}
+
+.trust{
+  text-align:center;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+}
+
+/* FOOTER */
+footer{
+  margin-top:40px;
+  padding:30px 12px;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.05);
+  background:rgba(0,0,0,.6);
+}
+footer small{
+  display:block;
+  margin-top:8px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  padding:14px 18px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  color:#fff;
+  font-weight:800;
+  z-index:999;
 }
 </style>
 </head>
 
 <body>
+
 <div class="wrap">
 
-<h1>Reseller program</h1>
+<header>
+  <img src="jugmedialogo.PNG" alt="Jug Media IPTV" class="site-logo">
+  <button class="menu-toggle" onclick="openNav()">☰</button>
+</header>
+
+<!-- FINAL HAMBURGER -->
+<nav id="nav" class="overlay">
+  <div class="closebtn" onclick="closeNav()">×</div>
+  <a href="index.html">Početna</a>
+  <a href="cjenovnik.html">Cjenovnik</a>
+  <a href="proba.html">Besplatna proba</a>
+  <a href="faq.html">FAQ</a>
+  <a href="onama.html">O nama</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="reseller.html">Reseller</a>
+</nav>
+
+<section class="hero">
+  <h1>Reseller program</h1>
+  <p>
+    Pokrenite vlastiti <strong>IPTV biznis</strong> uz Jug Media infrastrukturu.  
+    Vi prodajete – mi se brinemo o tehnici.
+  </p>
+</section>
 
 <div class="panel">
-<p>
-Postanite <strong>Jug Media IPTV reseller</strong> i započnite vlastiti IPTV biznis
-uz našu stabilnu infrastrukturu i tehničku podršku.
-</p>
-
-<p>
-✔ Rad pod svojim brendom  
-<br>✔ Stabilni serveri i sadržaj  
-<br>✔ Tehnička podrška  
-<br>✔ Dugoročna saradnja
-</p>
+  <h2>Zašto Jug Media reseller?</h2>
+  <p class="list">
+    ✔ Rad pod <strong>svojim brendom</strong><br>
+    ✔ Stabilni serveri i konstantna dostupnost<br>
+    ✔ Velika ponuda kanala, filmova i serija<br>
+    ✔ Tehnička podrška 24/7<br>
+    ✔ Dugoročna i ozbiljna saradnja
+  </p>
 </div>
 
 <div class="panel">
-<p>
-Reseller model je idealan za:
-<br>• Online prodavce  
-<br>• IT servise  
-<br>• Digitalne preduzetnike  
-<br>• IPTV prodavače
-</p>
+  <h2>Kome je namijenjeno?</h2>
+  <p class="list">
+    • Online prodavcima<br>
+    • IT servisima i freelancerima<br>
+    • Digitalnim preduzetnicima<br>
+    • IPTV prodavačima koji žele stabilnog partnera
+  </p>
 </div>
 
-<a href="https://wa.me/38761366591?text=Zdravo,%20zaniman%20me%20Jug%20Media%20reseller%20program." class="cta">
+<div class="panel">
+  <h2>Kako postati reseller?</h2>
+  <div class="steps">
+    <div class="step"><strong>1</strong><span>Kontaktirate nas</span></div>
+    <div class="step"><strong>2</strong><span>Dogovaramo uslove</span></div>
+    <div class="step"><strong>3</strong><span>Dobijate pristup</span></div>
+    <div class="step"><strong>4</strong><span>Počinjete prodaju</span></div>
+  </div>
+</div>
+
+<a href="https://wa.me/38761366591?text=Zdravo,%20zaniman%20me%20Jug%20Media%20reseller%20program." target="_blank" class="cta">
   💼 Kontaktiraj nas za reseller
 </a>
 
+<div class="trust">
+  ✔ 12+ godina iskustva<br>
+  ✔ 20.000+ aktivnih korisnika<br>
+  ✔ Pouzdan partner za dugoročan rast
 </div>
+
+<footer>
+  <strong>Jug Media IPTV</strong>
+  <small>© 2025 Sva prava zadržana</small>
+  <small>Jug Media ne hostuje niti emituje sadržaj – djelujemo kao tehnička platforma.</small>
+</footer>
+
+</div>
+
+<a href="https://wa.me/38761366591" class="whatsapp">💬 WhatsApp</a>
+
+<script>
+function openNav(){document.getElementById("nav").classList.add("open")}
+function closeNav(){document.getElementById("nav").classList.remove("open")}
+</script>
+
 </body>
 </html>
