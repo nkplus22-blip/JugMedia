@@ -6,7 +6,7 @@
 
   <title>FAQ – Česta pitanja | Jug Media IPTV</title>
 
-  <meta name="description" content="Odgovori na česta pitanja o Jug Media IPTV usluzi – uređaji, stabilnost, kanali, podrška i plaćanje.">
+  <meta name="description" content="Odgovori na česta pitanja o Jug Media IPTV – uređaji, internet, paketi, garancija i podrška 24/7.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +19,71 @@
       --muted:rgba(200,220,255,.25);
       --glass:rgba(255,255,255,.05);
     }
+    *{box-sizing:border-box}
     body{
       margin:0;
       font-family:Inter;
       background:linear-gradient(180deg,#050714,#02102a);
       color:#e6f7ff;
     }
-    .wrap{max-width:900px;margin:auto;padding:0 18px}
-    header{text-align:center;padding:30px 0}
-    h1{font-family:'Bebas Neue';font-size:48px;margin:0}
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:1000px;margin:auto;padding:0 18px}
+
+    header{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:24px 12px;
+      position:relative;
+    }
+    .site-logo{max-width:200px}
+    .menu-toggle{
+      position:absolute;
+      top:18px;
+      right:18px;
+      background:none;
+      border:none;
+      font-size:32px;
+      color:var(--neon);
+      cursor:pointer;
+    }
+
+    /* NAV */
+    .overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(0,6,20,.96);
+      backdrop-filter:blur(8px);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      transform:scale(0);
+      transition:.4s;
+      z-index:999;
+    }
+    .overlay.open{transform:scale(1)}
+    .overlay a{font-size:22px;padding:12px 20px}
+    .closebtn{
+      position:absolute;
+      top:18px;
+      right:22px;
+      font-size:36px;
+      color:var(--neon);
+      cursor:pointer;
+    }
+
+    .hero{
+      text-align:center;
+      padding:30px 0 20px;
+    }
+    .hero h1{
+      font-family:'Bebas Neue';
+      font-size:48px;
+      margin:0;
+    }
+    .hero p{color:var(--muted)}
+
     .faq{
       background:var(--glass);
       border-radius:16px;
@@ -37,16 +93,58 @@
     }
     .faq h3{margin-top:0;color:var(--neon)}
     .faq p{color:#dff4ff;line-height:1.7}
+
+    footer{
+      margin-top:40px;
+      padding:30px 12px;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,.05);
+      background:rgba(0,0,0,.6);
+    }
+    footer small{
+      display:block;
+      margin-top:8px;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      padding:14px 18px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#25d366,#128c7e);
+      color:#fff;
+      font-weight:800;
+      z-index:999;
+    }
   </style>
 </head>
 
 <body>
 
 <div class="wrap">
+
 <header>
-  <h1>Česta pitanja</h1>
-  <p style="color:var(--muted)">Sve što trebate znati prije kupovine</p>
+  <img src="jugmedialogo.PNG" class="site-logo" alt="Jug Media IPTV">
+  <button class="menu-toggle" onclick="openNav()">☰</button>
 </header>
+
+<nav id="nav" class="overlay">
+  <div class="closebtn" onclick="closeNav()">×</div>
+  <a href="index.html">Početna</a>
+  <a href="cjenovnik.html">Cjenovnik</a>
+  <a href="proba.html">Besplatna proba</a>
+  <a href="reseller.html">Reseller</a>
+  <a href="faq.html">FAQ</a>
+  <a href="kontakt.html">Kontakt</a>
+</nav>
+
+<section class="hero">
+  <h1>Česta pitanja</h1>
+  <p>Sve što trebate znati prije kupovine IPTV usluge</p>
+</section>
 
 <div class="faq">
   <h3>Na kojim uređajima radi IPTV?</h3>
@@ -54,13 +152,18 @@
 </div>
 
 <div class="faq">
-  <h3>Da li je potrebna jaka internet konekcija?</h3>
-  <p>Za HD sadržaj preporučujemo minimum 10 Mbps, a za 4K 25 Mbps.</p>
+  <h3>Kolika je potrebna brzina interneta?</h3>
+  <p>Za HD preporučujemo minimum 10 Mbps, a za 4K sadržaj 25 Mbps.</p>
 </div>
 
 <div class="faq">
   <h3>Da li postoji ugovor?</h3>
   <p>Ne. Kod nas nema ugovora niti obaveza – plaćate samo period koji koristite.</p>
+</div>
+
+<div class="faq">
+  <h3>Da li nudite besplatnu probu?</h3>
+  <p>Da. Nudimo besplatnu probu kako biste testirali kvalitet prije kupovine.</p>
 </div>
 
 <div class="faq">
@@ -73,7 +176,20 @@
   <p>Da. Nudimo potpunu garanciju zadovoljstva na svaku kupovinu.</p>
 </div>
 
+<footer>
+  <strong>Jug Media IPTV</strong>
+  <small>© 2025 Sva prava zadržana</small>
+  <small>Jug Media ne hostuje niti emituje sadržaj – djelujemo kao tehnička platforma.</small>
+</footer>
+
 </div>
+
+<a href="https://wa.me/38761366591" class="whatsapp" target="_blank">💬 WhatsApp</a>
+
+<script>
+function openNav(){document.getElementById("nav").classList.add("open")}
+function closeNav(){document.getElementById("nav").classList.remove("open")}
+</script>
 
 </body>
 </html>
