@@ -20,15 +20,19 @@
   --green:#3dff9e;
 }
 *{box-sizing:border-box}
+html,body{margin:0;padding:0}
 body{
-  margin:0;
   font-family:Inter;
   background:linear-gradient(180deg,#050714,#02102a);
   color:#e6f7ff;
+  overflow-x:hidden;
 }
+body.nav-open{overflow:hidden}
+
 a{text-decoration:none;color:inherit}
 .wrap{max-width:1100px;margin:auto;padding:0 18px}
 
+/* HEADER */
 header{
   text-align:center;
   padding:40px 0 20px;
@@ -49,32 +53,35 @@ header p{color:var(--muted)}
   cursor:pointer;
 }
 
-/* OVERLAY NAV */
+/* OVERLAY NAV – FIXED */
 .overlay{
-  height:100%;
-  width:0;
   position:fixed;
-  z-index:1000;
-  top:0;left:0;
-  background:rgba(2,10,30,.97);
-  transition:.4s;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background:rgba(2,10,30,.98);
+  z-index:2000;
+  display:none;
   padding-top:80px;
   text-align:center;
 }
+.overlay.open{display:block}
 .overlay a{
+  display:block;
   padding:14px;
   font-size:26px;
-  display:block;
 }
 .overlay a:hover{color:var(--neon)}
 .closebtn{
   position:absolute;
-  top:20px;right:30px;
+  top:20px;
+  right:30px;
   font-size:46px;
   cursor:pointer;
 }
 
-/* VERIFIED BADGE */
+/* VERIFIED */
 .verified{
   display:inline-flex;
   align-items:center;
@@ -140,9 +147,9 @@ header p{color:var(--muted)}
   font-size:11px;
   color:var(--green);
   margin-top:10px;
-  opacity:.85;
 }
 
+/* FOOTER */
 .footer-note{
   text-align:center;
   color:var(--muted);
@@ -159,12 +166,14 @@ header p{color:var(--muted)}
   background:linear-gradient(135deg,#25d366,#128c7e);
   color:#fff;
   font-weight:800;
+  z-index:1000;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav id="nav" class="overlay">
   <div class="closebtn" onclick="closeNav()">×</div>
   <a href="index.html" onclick="closeNav()">Početna</a>
@@ -190,7 +199,6 @@ header p{color:var(--muted)}
   <span>🔒 SSL Enkripcija</span>
   <span>🛡️ Ne pohranjujemo kartične podatke</span>
   <span>👤 Ručna obrada uplata</span>
-  <span>🌍 Podrška širom Evrope</span>
   <span>📞 24/7 podrška</span>
 </div>
 
@@ -198,19 +206,10 @@ header p{color:var(--muted)}
   ⭐ Više od <strong>20.000+</strong> korisnika potvrdilo sigurnost naših plaćanja
 </div>
 
-<div class="panel" style="font-size:14px;color:var(--muted);text-align:center">
-  🔐 Plaćanja se vrše isključivo putem provjerenih kanala.  
-  Nikada ne tražimo PIN, CVC ili pristupne kodove.
-</div>
-
 <div class="panel" style="font-size:14px;color:var(--muted)">
-  ℹ️ Aktivacija se vrši u roku od <strong>5–30 minuta</strong>.  
-  U rijetkim slučajevima do <strong>12 sati</strong>.  
-  💰 U slučaju tehničkog problema nudimo zamjenu ili povrat sredstava.
-</div>
-
-<div class="panel" style="font-size:13px;color:var(--muted)">
-  ⚠️ Naši agenti nikada neće tražiti lozinke, kodove ili pristup vašem uređaju.
+  ℹ️ Aktivacija: <strong>5–30 minuta</strong> (max 12h).  
+  💰 U slučaju problema nudimo zamjenu ili povrat sredstava.  
+  ⚠️ Nikada ne tražimo lozinke ili kodove.
 </div>
 
 <div class="panel">
@@ -218,20 +217,16 @@ header p{color:var(--muted)}
     <div class="pay-box" onclick="pay('Visa / MasterCard')">💳<strong>Visa / MasterCard</strong></div>
     <div class="pay-box" onclick="pay('PayPal')">🅿️<strong>PayPal</strong></div>
     <div class="pay-box" onclick="pay('Skrill')">💼<strong>Skrill</strong></div>
-    <div class="pay-box" onclick="pay('IBAN / Bank Transfer')">🏦<strong>IBAN</strong></div>
+    <div class="pay-box" onclick="pay('IBAN')">🏦<strong>IBAN</strong></div>
     <div class="pay-box" onclick="pay('Crypto')">₿<strong>Crypto</strong></div>
     <div class="pay-box" onclick="pay('Western Union')">🌍<strong>Western Union</strong></div>
     <div class="pay-box" onclick="pay('Ria Money')">💸<strong>Ria Money</strong></div>
-    <div class="pay-box" onclick="pay('Plaćanje u poslovnici – Sarajevo')">🏢<strong>Poslovnica</strong></div>
+    <div class="pay-box" onclick="pay('Poslovnica Sarajevo')">🏢<strong>Poslovnica</strong></div>
   </div>
 </div>
 
-<div class="footer-note">
-  Posljednje ažuriranje sistema plaćanja: <strong>2025</strong>
-</div>
-
 <div class="panel footer-note">
-  Jug Media IPTV je dugogodišnja i provjerena IPTV usluga sa stvarnom korisničkom podrškom.
+  Posljednje ažuriranje sistema plaćanja: <strong>2025</strong>
 </div>
 
 </div>
@@ -239,8 +234,14 @@ header p{color:var(--muted)}
 <a href="https://wa.me/38761366591" class="whatsapp">💬 WhatsApp</a>
 
 <script>
-function openNav(){document.getElementById("nav").style.width="100%";}
-function closeNav(){document.getElementById("nav").style.width="0";}
+function openNav(){
+  document.getElementById("nav").classList.add("open");
+  document.body.classList.add("nav-open");
+}
+function closeNav(){
+  document.getElementById("nav").classList.remove("open");
+  document.body.classList.remove("nav-open");
+}
 function pay(method){
   const text=`Zdravo, želio bih vaše usluge platiti putem ${method}. Molim podatke. Hvala!`;
   window.open("https://wa.me/38761366591?text="+encodeURIComponent(text),"_blank");
