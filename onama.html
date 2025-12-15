@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="bs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>O nama – Jug Media IPTV</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Jug Media IPTV – više od 12 godina iskustva, preko 20.000 aktivnih korisnika i potpuna garancija na svaku kupovinu.">
+  <meta name="keywords" content="Jug Media IPTV, o nama, IPTV provajder">
+  <meta name="author" content="Jug Media">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#050714;
+      --neon:#2ac0ff;
+      --accent:#4a6bff;
+      --muted:rgba(200,220,255,0.25);
+      --glass:rgba(255,255,255,0.05);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,sans-serif;
+      background:linear-gradient(180deg,#050714,#02102a);
+      color:#e6f7ff;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    .wrap{max-width:1000px;margin:auto;padding:0 18px}
+
+    header{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:24px 12px;
+      position:relative;
+    }
+    .site-logo{max-width:200px}
+    .menu-toggle{
+      position:absolute;
+      top:18px;
+      right:18px;
+      background:none;
+      border:none;
+      color:var(--neon);
+      font-size:32px;
+    }
+
+    /* NAV */
+    .overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(0,6,20,.96);
+      backdrop-filter:blur(8px);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      transform:scale(0);
+      transition:.4s;
+      z-index:999;
+    }
+    .overlay.open{transform:scale(1)}
+    .overlay a{font-size:22px;padding:12px 20px}
+    .closebtn{
+      position:absolute;
+      top:18px;
+      right:22px;
+      font-size:36px;
+      color:var(--neon);
+    }
+
+    /* CONTENT */
+    .hero{
+      text-align:center;
+      padding:30px 0 20px;
+    }
+    .hero h1{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:46px;
+      margin:0;
+    }
+    .hero p{
+      max-width:720px;
+      margin:12px auto;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .panel{
+      background:var(--glass);
+      border-radius:16px;
+      padding:26px;
+      margin:24px 0;
+      border:1px solid rgba(255,255,255,.05);
+    }
+    .panel h2{
+      margin-top:0;
+      color:#fff;
+    }
+    .panel p{
+      line-height:1.8;
+      color:#dff4ff;
+    }
+
+    .highlights{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+      margin-top:20px;
+    }
+    .highlight{
+      background:rgba(255,255,255,.04);
+      border-radius:14px;
+      padding:18px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,.05);
+    }
+    .highlight strong{
+      display:block;
+      font-size:22px;
+      color:var(--neon);
+    }
+    .highlight span{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    footer{
+      margin-top:40px;
+      padding:30px 12px;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,.05);
+      background:rgba(0,0,0,.6);
+    }
+    footer small{
+      display:block;
+      margin-top:8px;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      padding:14px 18px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#25d366,#128c7e);
+      color:#fff;
+      font-weight:800;
+      z-index:999;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<header>
+  <img src="jugmedialogo.PNG" alt="Jug Media IPTV" class="site-logo" loading="lazy">
+  <button class="menu-toggle" onclick="openNav()">☰</button>
+</header>
+
+<nav id="nav" class="overlay">
+  <div class="closebtn" onclick="closeNav()">×</div>
+  <a href="index.html">Početna</a>
+  <a href="cjenovnik.html">Cjenovnik</a>
+  <a href="onama.html">O nama</a>
+  <a href="kontakt.html">Kontakt</a>
+</nav>
+
+<section class="hero">
+  <h1>Ko smo mi</h1>
+  <p>
+    Jug Media je profesionalni IPTV provajder sa dugogodišnjim iskustvom i
+    jasnim ciljem – ponuditi stabilan, kvalitetan i pouzdan IPTV servis.
+  </p>
+</section>
+
+<div class="panel">
+  <h2>12 godina iskustva u IPTV industriji</h2>
+  <p>
+    Više od <strong>12 godina</strong> gradimo pouzdanu IPTV infrastrukturu koja danas
+    opslužuje preko <strong>20.000 aktivnih korisnika</strong> širom svijeta.
+    Tokom godina smo konstantno unapređivali naše servere, sadržaj i korisničku podršku.
+  </p>
+  <p>
+    Aktivni smo <strong>24/7</strong> i dostupni našim korisnicima u svakom trenutku –
+    od tehničke pomoći do savjeta prilikom izbora paketa.
+  </p>
+</div>
+
+<div class="panel">
+  <h2>Garancija i povjerenje</h2>
+  <p>
+    Svakom korisniku nudimo <strong>potpunu garanciju na svaku kupovinu</strong>.
+    Naš cilj nije jednokratna prodaja, već dugoročno zadovoljstvo i saradnja.
+  </p>
+  <p>
+    Ukoliko niste zadovoljni uslugom, naš tim će pronaći rješenje – brzo i profesionalno.
+  </p>
+
+  <div class="highlights">
+    <div class="highlight">
+      <strong>20.000+</strong>
+      <span>aktivnih korisnika</span>
+    </div>
+    <div class="highlight">
+      <strong>12+</strong>
+      <span>godina iskustva</span>
+    </div>
+    <div class="highlight">
+      <strong>24/7</strong>
+      <span>korisnička podrška</span>
+    </div>
+    <div class="highlight">
+      <strong>100%</strong>
+      <span>garancija zadovoljstva</span>
+    </div>
+  </div>
+</div>
+
+<div class="panel">
+  <h2>Zašto izabrati Jug Media?</h2>
+  <p>
+    ✔ Stabilan signal bez prekida  
+    <br>✔ Velika ponuda kanala, filmova i serija  
+    <br>✔ Redovno ažuriranje sadržaja  
+    <br>✔ Brza i stručna tehnička podrška  
+    <br>✔ Transparentna ponuda bez skrivenih troškova
+  </p>
+</div>
+
+<footer>
+  <strong>Jug Media IPTV</strong>
+  <small>© 2025 Sva prava zadržana</small>
+  <small>Jug Media ne hostuje niti emituje sadržaj – djelujemo kao tehnička platforma.</small>
+</footer>
+
+</div>
+
+<a href="https://wa.me/38761366591" target="_blank" class="whatsapp">💬 WhatsApp</a>
+
+<script>
+function openNav(){document.getElementById("nav").classList.add("open")}
+function closeNav(){document.getElementById("nav").classList.remove("open")}
+</script>
+
+</body>
+</html>
