@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="bs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Jug Media IPTV – #1 Stabilan IPTV servis</title>
+
+<meta name="description" content="Jug Media IPTV – 12 godina iskustva, 20.000+ korisnika, HD/4K kanali, filmovi i serije. Besplatna proba, podrška 24/7.">
+<meta name="keywords" content="IPTV, Jug Media IPTV, najbolji IPTV, IPTV Balkan">
+<meta name="author" content="Jug Media">
+
+<meta property="og:title" content="Jug Media IPTV">
+<meta property="og:description" content="Stabilan IPTV servis sa garancijom i podrškom 24/7.">
+<meta property="og:image" content="jugmedialogo.PNG">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --neon:#2ac0ff;
+  --accent:#4a6bff;
+  --muted:rgba(200,220,255,.25);
+  --glass:rgba(255,255,255,.05);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter;
+  background:linear-gradient(180deg,#050714,#02102a);
+  color:#e6f7ff;
+}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1200px;margin:auto;padding:0 18px}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:26px 12px;
+  position:relative;
+}
+.site-logo{max-width:220px}
+.tagline{font-size:14px;color:var(--muted);margin-top:6px}
+.menu-toggle{
+  position:absolute;
+  top:18px;right:18px;
+  font-size:32px;
+  background:none;border:none;
+  color:var(--neon);
+}
+
+/* NAV */
+.overlay{
+  position:fixed;inset:0;
+  background:rgba(0,6,20,.96);
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  transform:scale(0);
+  transition:.4s;
+  z-index:999;
+}
+.overlay.open{transform:scale(1)}
+.overlay a{font-size:22px;padding:12px}
+.closebtn{position:absolute;top:18px;right:22px;font-size:36px;color:var(--neon)}
+
+/* HERO */
+.hero{text-align:center;padding:40px 0}
+.hero h1{
+  font-family:'Bebas Neue';
+  font-size:56px;
+  margin:0;
+}
+.hero p{
+  max-width:760px;
+  margin:14px auto;
+  color:var(--muted);
+  line-height:1.7;
+}
+.cta{
+  display:inline-block;
+  margin:10px;
+  padding:14px 30px;
+  border-radius:16px;
+  background:linear-gradient(135deg,var(--neon),var(--accent));
+  color:#001;
+  font-weight:900;
+}
+
+/* PANELS */
+.panel{
+  background:var(--glass);
+  border-radius:18px;
+  padding:28px;
+  margin:30px 0;
+  border:1px solid rgba(255,255,255,.05);
+}
+
+/* TRUST GRID */
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:16px;
+}
+.trust-item{
+  background:rgba(255,255,255,.04);
+  border-radius:16px;
+  padding:22px;
+  text-align:center;
+}
+.trust-item h3{margin:10px 0 4px;color:var(--neon)}
+.trust-item p{font-size:13px;color:var(--muted)}
+
+/* COUNTERS */
+.counters{
+  display:flex;flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;margin:30px 0;
+}
+.counter-box{
+  min-width:160px;
+  background:var(--glass);
+  padding:18px;
+  border-radius:14px;
+  text-align:center;
+}
+.counter{font-size:28px;font-weight:800;color:var(--neon)}
+.counter-label{font-size:13px;color:var(--muted)}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px 12px;
+  background:rgba(0,0,0,.6);
+  border-top:1px solid rgba(255,255,255,.05);
+}
+footer small{display:block;margin-top:6px;color:var(--muted);font-size:12px}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  right:18px;bottom:18px;
+  padding:14px 18px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  color:#fff;font-weight:800;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<header>
+  <img src="jugmedialogo.PNG" class="site-logo">
+  <div class="tagline">Pouzdan IPTV servis širom svijeta</div>
+  <button class="menu-toggle" onclick="openNav()">☰</button>
+</header>
+
+<nav id="nav" class="overlay">
+  <div class="closebtn" onclick="closeNav()">×</div>
+  <a href="index.html">Početna</a>
+  <a href="cjenovnik.html">Cjenovnik</a>
+  <a href="placanje.html">Načini plaćanja</a>
+  <a href="proba.html">Besplatna proba</a>
+  <a href="faq.html">FAQ</a>
+  <a href="onama.html">O nama</a>
+  <a href="reseller.html">Reseller</a>
+  <a href="kontakt.html">Kontakt</a>
+</nav>
+
+<section class="hero">
+  <h1>Jug Media IPTV</h1>
+  <p>Već <strong>12 godina</strong> pružamo stabilan IPTV servis sa preko <strong>20.000 korisnika</strong>.</p>
+  <a href="proba.html" class="cta">🎯 Besplatna proba</a>
+  <a href="cjenovnik.html" class="cta">💳 Pogledaj pakete</a>
+</section>
+
+<div class="panel">
+  <h2 style="text-align:center">📡 Status sistema</h2>
+  <div class="trust-grid">
+    <div class="trust-item">🟢<h3>Sistem</h3><p>Online</p></div>
+    <div class="trust-item">⚡<h3>Uptime</h3><p>99.9%</p></div>
+    <div class="trust-item">🌍<h3>Pokrivenost</h3><p>EU / USA / Balkan</p></div>
+    <div class="trust-item">🔐<h3>Sigurnost</h3><p>Zaštićeni serveri</p></div>
+  </div>
+</div>
+
+<div class="counters">
+  <div class="counter-box"><div class="counter" data-target="20000">0</div><div class="counter-label">Korisnika</div></div>
+  <div class="counter-box"><div class="counter" data-target="12">0</div><div class="counter-label">Godina</div></div>
+  <div class="counter-box"><div class="counter" data-target="24">0</div><div class="counter-label">Podrška</div></div>
+</div>
+
+<div class="panel">
+  <h2>Za koga je Jug Media IPTV?</h2>
+  <div class="trust-grid">
+    <div class="trust-item">👨‍👩‍👧<h3>Porodice</h3><p>Domaći i strani kanali</p></div>
+    <div class="trust-item">⚽<h3>Sport</h3><p>Live & PPV</p></div>
+    <div class="trust-item">🎬<h3>Filmovi</h3><p>Ogromna VOD baza</p></div>
+    <div class="trust-item">🌍<h3>Dijaspora</h3><p>Balkan kanali</p></div>
+  </div>
+</div>
+
+<div class="panel" style="text-align:center">
+  <h2>Još niste sigurni?</h2>
+  <p style="color:var(--muted)">Testirajte IPTV bez ikakve obaveze.</p>
+  <a href="proba.html" class="cta">🚀 Pokreni probu</a>
+</div>
+
+<footer>
+  <strong>Jug Media IPTV</strong>
+  <small>© 2025 Sva prava zadržana</small>
+  <small>Ne hostujemo sadržaj – djelujemo kao tehnička platforma</small>
+</footer>
+
+</div>
+
+<a href="https://wa.me/38761366591" class="whatsapp">💬 WhatsApp</a>
+
+<script>
+function openNav(){nav.classList.add("open")}
+function closeNav(){nav.classList.remove("open")}
+const counters=document.querySelectorAll(".counter");
+const obs=new IntersectionObserver(e=>{
+  e.forEach(x=>{
+    if(x.isIntersecting){
+      let c=0,t=+x.target.dataset.target,s=t/60;
+      let i=setInterval(()=>{
+        c+=s;
+        if(c>=t){x.target.textContent=t+"+";clearInterval(i)}
+        else x.target.textContent=Math.floor(c)
+      },20);
+      obs.unobserve(x.target);
+    }
+  })
+},{threshold:.5});
+counters.forEach(c=>obs.observe(c));
+</script>
+
+</body>
+</html>
