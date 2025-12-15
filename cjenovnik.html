@@ -7,7 +7,7 @@
   <title>Cjenovnik – Jug Media IPTV paketi</title>
 
   <!-- SEO -->
-  <meta name="description" content="Jug Media IPTV paketi – Classic, Medium i Pro. Hiljade kanala, filmova i serija uz stabilan IPTV servis.">
+  <meta name="description" content="Jug Media IPTV paketi – Classic, Medium i Pro. Hiljade kanala, filmova i serija uz stabilan IPTV servis i podršku 24/7.">
   <meta name="keywords" content="IPTV cijene, IPTV paketi, Jug Media IPTV">
   <meta name="author" content="Jug Media">
 
@@ -18,13 +18,11 @@
 
   <style>
     :root{
-      --bg:#050714;
       --neon:#2ac0ff;
       --accent:#4a6bff;
-      --muted:rgba(200,220,255,0.25);
-      --glass:rgba(255,255,255,0.05);
+      --muted:rgba(200,220,255,.25);
+      --glass:rgba(255,255,255,.05);
     }
-
     *{box-sizing:border-box}
     body{
       margin:0;
@@ -33,7 +31,6 @@
       color:#e6f7ff;
     }
     a{text-decoration:none;color:inherit}
-
     .wrap{max-width:1200px;margin:auto;padding:0 18px}
 
     header{
@@ -52,6 +49,7 @@
       border:none;
       color:var(--neon);
       font-size:32px;
+      cursor:pointer;
     }
 
     /* NAV */
@@ -76,15 +74,15 @@
       right:22px;
       font-size:36px;
       color:var(--neon);
+      cursor:pointer;
     }
 
-    /* HERO */
     .hero{
       text-align:center;
       padding:30px 12px 10px;
     }
     .hero h1{
-      font-family:'Bebas Neue',sans-serif;
+      font-family:'Bebas Neue';
       font-size:48px;
       margin:0;
     }
@@ -92,13 +90,14 @@
       max-width:720px;
       margin:10px auto;
       color:var(--muted);
+      line-height:1.6;
     }
 
     /* PRICING */
     .pricing{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:20px;
+      gap:22px;
       margin:40px 0;
     }
     .plan{
@@ -109,10 +108,7 @@
       border:1px solid rgba(255,255,255,.05);
       position:relative;
     }
-    .plan h2{
-      margin-top:0;
-      font-size:26px;
-    }
+    .plan h2{margin-top:0;font-size:26px}
     .price{
       font-size:42px;
       font-weight:800;
@@ -126,8 +122,8 @@
     .features{
       margin:18px 0;
       line-height:1.8;
-      color:#dff4ff;
       font-size:15px;
+      color:#dff4ff;
     }
     .btn{
       display:inline-block;
@@ -142,8 +138,8 @@
     /* PRO */
     .pro{
       border:2px solid var(--neon);
-      transform:scale(1.05);
-      box-shadow:0 0 40px rgba(42,176,255,.25);
+      transform:scale(1.06);
+      box-shadow:0 0 40px rgba(42,176,255,.3);
     }
     .badge{
       position:absolute;
@@ -156,6 +152,15 @@
       border-radius:12px;
       font-size:12px;
       font-weight:800;
+    }
+
+    /* TRUST */
+    .trust{
+      text-align:center;
+      margin:30px auto 10px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
     }
 
     footer{
@@ -195,18 +200,24 @@
   <button class="menu-toggle" onclick="openNav()">☰</button>
 </header>
 
+<!-- FINAL HAMBURGER -->
 <nav id="nav" class="overlay">
   <div class="closebtn" onclick="closeNav()">×</div>
   <a href="index.html">Početna</a>
   <a href="cjenovnik.html">Cjenovnik</a>
+  <a href="proba.html">Besplatna proba</a>
+  <a href="faq.html">FAQ</a>
   <a href="onama.html">O nama</a>
   <a href="kontakt.html">Kontakt</a>
+  <a href="reseller.html">Reseller</a>
 </nav>
 
 <section class="hero">
   <h1>IPTV Paketi</h1>
-  <p>Izaberite paket koji najbolje odgovara vašim potrebama.  
-     Bez ugovora, bez skrivenih troškova.</p>
+  <p>
+    Bez ugovora. Bez skrivenih troškova.  
+    Garancija zadovoljstva na svaki paket.
+  </p>
 </section>
 
 <section class="pricing">
@@ -216,7 +227,7 @@
     <div class="price">6.99€ <span>/ mjesečno</span></div>
     <div class="features">
       ✔ 750 live TV programa<br>
-      ✔ 6.500+ videoteke<br>
+      ✔ 6.500+ filmova i serija<br>
       ✔ Stabilan signal<br>
       ✔ Podrška 24/7
     </div>
@@ -230,7 +241,7 @@
     <div class="price">7.99€ <span>/ mjesečno</span></div>
     <div class="features">
       ✔ 1.380 live TV programa<br>
-      ✔ 23.500+ videoteke<br>
+      ✔ 23.500+ filmova i serija<br>
       ✔ Full HD & 4K<br>
       ✔ Podrška 24/7
     </div>
@@ -245,7 +256,7 @@
     <div class="price">12.99€ <span>/ mjesečno</span></div>
     <div class="features">
       ✔ 2.250+ live TV kanala<br>
-      ✔ 65.000+ videoteke<br>
+      ✔ 65.000+ filmova i serija<br>
       ✔ Sedmično dodavanje sadržaja<br>
       ✔ Premium podrška 24/7
     </div>
@@ -256,6 +267,12 @@
 
 </section>
 
+<div class="trust">
+  ✔ Više od 12 godina iskustva  
+  <br>✔ Preko 20.000 aktivnih korisnika  
+  <br>✔ 100% garancija na svaku kupovinu
+</div>
+
 <footer>
   <strong>Jug Media IPTV</strong>
   <small>© 2025 Sva prava zadržana</small>
@@ -264,7 +281,7 @@
 
 </div>
 
-<a href="https://wa.me/38761366591" target="_blank" class="whatsapp">💬 WhatsApp</a>
+<a href="https://wa.me/38761366591" class="whatsapp">💬 WhatsApp</a>
 
 <script>
 function openNav(){document.getElementById("nav").classList.add("open")}
