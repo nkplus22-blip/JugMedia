@@ -7,8 +7,8 @@
   <title>O nama – Jug Media IPTV</title>
 
   <!-- SEO -->
-  <meta name="description" content="Jug Media IPTV – više od 12 godina iskustva, preko 20.000 aktivnih korisnika i potpuna garancija na svaku kupovinu.">
-  <meta name="keywords" content="Jug Media IPTV, o nama, IPTV provajder">
+  <meta name="description" content="Jug Media IPTV – preko 12 godina iskustva i 20.000+ aktivnih korisnika. Stabilan IPTV servis sa garancijom i podrškom 24/7.">
+  <meta name="keywords" content="Jug Media IPTV, o nama, IPTV provajder, stabilan IPTV">
   <meta name="author" content="Jug Media">
 
   <!-- Fonts -->
@@ -18,13 +18,11 @@
 
   <style>
     :root{
-      --bg:#050714;
       --neon:#2ac0ff;
       --accent:#4a6bff;
-      --muted:rgba(200,220,255,0.25);
-      --glass:rgba(255,255,255,0.05);
+      --muted:rgba(200,220,255,.25);
+      --glass:rgba(255,255,255,.05);
     }
-
     *{box-sizing:border-box}
     body{
       margin:0;
@@ -32,9 +30,7 @@
       background:linear-gradient(180deg,#050714,#02102a);
       color:#e6f7ff;
     }
-
     a{text-decoration:none;color:inherit}
-
     .wrap{max-width:1000px;margin:auto;padding:0 18px}
 
     header{
@@ -53,6 +49,7 @@
       border:none;
       color:var(--neon);
       font-size:32px;
+      cursor:pointer;
     }
 
     /* NAV */
@@ -77,15 +74,15 @@
       right:22px;
       font-size:36px;
       color:var(--neon);
+      cursor:pointer;
     }
 
-    /* CONTENT */
     .hero{
       text-align:center;
       padding:30px 0 20px;
     }
     .hero h1{
-      font-family:'Bebas Neue',sans-serif;
+      font-family:'Bebas Neue';
       font-size:46px;
       margin:0;
     }
@@ -93,7 +90,7 @@
       max-width:720px;
       margin:12px auto;
       color:var(--muted);
-      line-height:1.6;
+      line-height:1.7;
     }
 
     .panel{
@@ -103,14 +100,8 @@
       margin:24px 0;
       border:1px solid rgba(255,255,255,.05);
     }
-    .panel h2{
-      margin-top:0;
-      color:#fff;
-    }
-    .panel p{
-      line-height:1.8;
-      color:#dff4ff;
-    }
+    .panel h2{margin-top:0}
+    .panel p{line-height:1.8;color:#dff4ff}
 
     .highlights{
       display:grid;
@@ -133,6 +124,16 @@
     .highlight span{
       font-size:13px;
       color:var(--muted);
+    }
+
+    .cta{
+      display:inline-block;
+      margin-top:12px;
+      padding:14px 26px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--neon),var(--accent));
+      color:#001;
+      font-weight:800;
     }
 
     footer{
@@ -172,85 +173,66 @@
   <button class="menu-toggle" onclick="openNav()">☰</button>
 </header>
 
+<!-- FINAL HAMBURGER MENU -->
 <nav id="nav" class="overlay">
   <div class="closebtn" onclick="closeNav()">×</div>
   <a href="index.html">Početna</a>
   <a href="cjenovnik.html">Cjenovnik</a>
+  <a href="proba.html">Besplatna proba</a>
+  <a href="faq.html">FAQ</a>
   <a href="onama.html">O nama</a>
   <a href="kontakt.html">Kontakt</a>
+  <a href="reseller.html">Reseller</a>
 </nav>
 
 <section class="hero">
   <h1>Ko smo mi</h1>
   <p>
-    Jug Media je profesionalni IPTV provajder sa dugogodišnjim iskustvom i
-    jasnim ciljem – ponuditi stabilan, kvalitetan i pouzdan IPTV servis.
+    Jug Media je profesionalni IPTV provajder sa jasnim ciljem –
+    ponuditi stabilan, kvalitetan i pouzdan IPTV servis korisnicima širom svijeta.
   </p>
 </section>
 
 <div class="panel">
-  <h2>12 godina iskustva u IPTV industriji</h2>
+  <h2>12 godina iskustva i povjerenja</h2>
   <p>
-    Više od <strong>12 godina</strong> gradimo pouzdanu IPTV infrastrukturu koja danas
-    opslužuje preko <strong>20.000 aktivnih korisnika</strong> širom svijeta.
-    Tokom godina smo konstantno unapređivali naše servere, sadržaj i korisničku podršku.
-  </p>
-  <p>
-    Aktivni smo <strong>24/7</strong> i dostupni našim korisnicima u svakom trenutku –
-    od tehničke pomoći do savjeta prilikom izbora paketa.
+    Više od <strong>12 godina</strong> razvijamo IPTV infrastrukturu koja danas
+    opslužuje preko <strong>20.000 aktivnih korisnika</strong>.
+    Naš fokus je stabilnost, kvalitet i dugoročno zadovoljstvo korisnika.
   </p>
 </div>
 
 <div class="panel">
-  <h2>Garancija i povjerenje</h2>
+  <h2>Zašto nam korisnici vjeruju?</h2>
   <p>
-    Svakom korisniku nudimo <strong>potpunu garanciju na svaku kupovinu</strong>.
-    Naš cilj nije jednokratna prodaja, već dugoročno zadovoljstvo i saradnja.
-  </p>
-  <p>
-    Ukoliko niste zadovoljni uslugom, naš tim će pronaći rješenje – brzo i profesionalno.
+    Aktivni smo <strong>24/7</strong>, nudimo <strong>potpunu garanciju</strong> na svaku kupovinu
+    i pružamo brzu i profesionalnu podršku.
   </p>
 
   <div class="highlights">
-    <div class="highlight">
-      <strong>20.000+</strong>
-      <span>aktivnih korisnika</span>
-    </div>
-    <div class="highlight">
-      <strong>12+</strong>
-      <span>godina iskustva</span>
-    </div>
-    <div class="highlight">
-      <strong>24/7</strong>
-      <span>korisnička podrška</span>
-    </div>
-    <div class="highlight">
-      <strong>100%</strong>
-      <span>garancija zadovoljstva</span>
-    </div>
+    <div class="highlight"><strong>20.000+</strong><span>aktivnih korisnika</span></div>
+    <div class="highlight"><strong>12+</strong><span>godina iskustva</span></div>
+    <div class="highlight"><strong>24/7</strong><span>podrška</span></div>
+    <div class="highlight"><strong>100%</strong><span>garancija</span></div>
   </div>
 </div>
 
-<div class="panel">
-  <h2>Zašto izabrati Jug Media?</h2>
-  <p>
-    ✔ Stabilan signal bez prekida  
-    <br>✔ Velika ponuda kanala, filmova i serija  
-    <br>✔ Redovno ažuriranje sadržaja  
-    <br>✔ Brza i stručna tehnička podrška  
-    <br>✔ Transparentna ponuda bez skrivenih troškova
-  </p>
+<div class="panel" style="text-align:center">
+  <h2>Spremni za isprobavanje?</h2>
+  <p>Kontaktirajte nas ili zatražite besplatnu probu bez obaveze.</p>
+  <a href="proba.html" class="cta">🎯 Besplatna proba</a>
 </div>
 
 <footer>
   <strong>Jug Media IPTV</strong>
   <small>© 2025 Sva prava zadržana</small>
   <small>Jug Media ne hostuje niti emituje sadržaj – djelujemo kao tehnička platforma.</small>
+  <small>Svi nazivi kanala i logotipi pripadaju svojim vlasnicima.</small>
 </footer>
 
 </div>
 
-<a href="https://wa.me/38761366591" target="_blank" class="whatsapp">💬 WhatsApp</a>
+<a href="https://wa.me/38761366591" class="whatsapp">💬 WhatsApp</a>
 
 <script>
 function openNav(){document.getElementById("nav").classList.add("open")}
